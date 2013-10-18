@@ -17,10 +17,10 @@ public class Usuario {
 	public void setnombreUsuario(String nombreUsuario) {
 		this.nombreUsuario = nombreUsuario;
 	}
-	public String getPassword() {
+	public String getClave() {
 		return clave;
 	}
-	public void setPassword(String password) {
+	public void setClave(String clave) {
 		this.clave = clave;
 	}
 	
