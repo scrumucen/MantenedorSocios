@@ -46,9 +46,9 @@ public class BuscaEliminaUsuarioAction extends DispatchAction {
 		LOG.info("ACTION eliminar");
 		BuscaEliminaUsuarioForm form = (BuscaEliminaUsuarioForm) aform;
 		ActionMessages keyMensajes = new ActionMessages();
-		Usuario user = new Usuario();
+		Usuario Usuario = new Usuario();
 		Usuario.setId(Long.valueOf(form.getSelectedUsuario()));
-		if (!UsuarioLogica.eliminaUsuario(usuario)){
+		if (!UsuarioLogica.eliminaUsuario(Usuario)){
 			keyMensajes.add("msj", new ActionMessage(
 					"CrudUsuarios.noSePudoEliminar"));
 		}
@@ -64,6 +64,6 @@ public class BuscaEliminaUsuarioAction extends DispatchAction {
 		}
 		user.setnombreUsuario(form.getnombreUsuario());
 		user.setClave(form.getClave());
-		form.setUsuarioList(UsuarioLogica.buscaUsuario(usuario));
+		form.setUsuarioList(UsuarioLogica.buscaUsuario(Usuario));
 	}
 }
