@@ -24,7 +24,7 @@ public class BuscaEliminaUsuarioForm extends ActionForm {
 			return usuarioList;
 		}
 
-		public void setUserList(List<Usuario> userList) {
+		public void setUsuarioList(List<Usuario> usuarioList) {
 			this.usuarioList = usuarioList;
 		}
 
