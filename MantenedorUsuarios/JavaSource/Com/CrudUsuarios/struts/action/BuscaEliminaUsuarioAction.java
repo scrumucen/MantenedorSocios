@@ -57,13 +57,13 @@ public class BuscaEliminaUsuarioAction extends DispatchAction {
 	}
 	
 	private void cargaForm(BuscaEliminaUsuarioForm form) throws Exception{
-		Usuario user = new Usuario();
+		Usuario Usuario = new Usuario();
 		try {
-			user.setId(Long.valueOf(form.getId()));
+			Usuario.setId(Long.valueOf(form.getId()));
 		} catch (NumberFormatException e) {
 		}
-		user.setnombreUsuario(form.getnombreUsuario());
-		user.setClave(form.getClave());
+		Usuario.setnombreUsuario(form.getnombreUsuario());
+		Usuario.setClave(form.getClave());
 		form.setUsuarioList(UsuarioLogica.buscaUsuario(Usuario));
 	}
 }
